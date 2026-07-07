@@ -9,7 +9,7 @@ class Opit < Formula
   depends_on :macos
 
   def install
-    bin.install "opit-v0.1.0-aarch64-apple-darwin/opit"
+    bin.install "opit"
   end
 
   test do

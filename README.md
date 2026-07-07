@@ -27,6 +27,7 @@ After cutting a new `opit` release (tag `vX.Y.Z`), update `Formula/opit.rb`:
    gh release download vX.Y.Z --repo jimytc/opit --pattern "opit-vX.Y.Z-aarch64-apple-darwin.tar.gz"
    shasum -a 256 opit-vX.Y.Z-aarch64-apple-darwin.tar.gz
    ```
-2. Update `url`, `sha256`, `version`, and the `bin.install` path in `Formula/opit.rb` to match
-   the new version.
+2. Update `url`, `sha256`, and `version` in `Formula/opit.rb` to match the new version
+   (the `bin.install "opit"` line doesn't need to change — Homebrew automatically strips
+   the tarball's single top-level directory when staging).
 3. Commit and push.
